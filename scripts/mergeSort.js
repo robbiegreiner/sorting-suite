@@ -4,13 +4,14 @@ function mergeSort(array)  {
   }
 
   var middle = parseInt(array.length / 2);
-  var leftArray   = array.slice(0, middle);
-  var rightArray  = array.slice(middle, array.length);
+  var leftArray = array.slice(0, middle);
+  var rightArray = array.slice(middle, array.length);
 
   return merge(mergeSort(leftArray), mergeSort(rightArray));
 }
 
 function merge(leftArray, rightArray)   {
+  debugger;
   var sortedArray = [];
 
   while (leftArray.length > 0 && rightArray.length > 0) {
