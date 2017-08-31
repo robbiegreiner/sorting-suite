@@ -1,18 +1,25 @@
-function quickSort(arr) {
-  if (arr.length <= 1) return arr;
+function quickSort(array) {
 
-  var pivot = arr[arr.length - 1];
-  var left = [];
-  var right = [];
-
-  for ( var i = 0; i < arr.length - 1; i++) {
-    if (arr[i] < pivot) {
-      left.push(arr[i])
-    }
-    else right.push(arr[i])
+  if (array.length <= 1){
+    return array;
   }
 
-    return [...quickSort(left), pivot, ...quickSort(right)]
+
+  var pivot = array[array.length - 1];
+
+
+  var leftArray = [];
+  var rightArray = [];
+
+
+  for ( var i = 0; i < array.length - 1; i++) {
+    if (array[i] < pivot) {
+      leftArray.push(array[i])
+    }
+    else rightArray.push(array[i])
+  }
+
+    return [...quickSort(leftArray), pivot, ...quickSort(rightArray)]
 
 }
 

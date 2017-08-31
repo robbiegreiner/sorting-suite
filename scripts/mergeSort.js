@@ -11,7 +11,6 @@ function mergeSort(array)  {
 }
 
 function merge(leftArray, rightArray)   {
-  debugger;
   var sortedArray = [];
 
   while (leftArray.length > 0 && rightArray.length > 0) {
@@ -22,7 +21,7 @@ function merge(leftArray, rightArray)   {
     }
   }
 
-  sortedArray.push(...leftArray, ...rightArray)
+  sortedArray.push(...leftArray, ...rightArray)  
 
   return sortedArray;
 }
